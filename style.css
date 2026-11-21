@@ -1,0 +1,675 @@
+
+/* ==========================================
+   PERSONAL PORTFOLIO WEBSITE
+   MIDNIGHT PURPLE GLASSMORPHISM THEME
+   ========================================== */
+
+/* 1. GENERAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background:
+        radial-gradient(circle at top left, #20264a, transparent 45%),
+        radial-gradient(circle at bottom right, #192d40, transparent 45%),
+        #080b12;
+    color: #d1d5e0;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+/* 2. NAVIGATION BAR */
+.site-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    padding: 15px 5%;
+    background: rgba(8, 11, 18, 0.92);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.navbar-inner {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    color: #b8c4ff;
+    font-size: 21px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #ffffff;
+}
+
+.site-navbar nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 17px;
+}
+
+.site-navbar nav a {
+    color: #d1d5e0;
+    font-size: 12px;
+    transition: 0.3s ease;
+}
+
+.site-navbar nav a:hover {
+    color: #9b7bff;
+}
+
+.menu-toggle {
+    display: none;
+    color: #ffffff;
+    background: transparent;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* 3. COMMON GLASS CARD */
+.glass-card {
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    padding: 35px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.22);
+    transition: 0.3s ease;
+}
+
+.glass-card:hover {
+    border-color: rgba(155, 123, 255, 0.35);
+}
+
+/* 4. COMMON CONTENT SECTIONS */
+.content-section {
+    width: 90%;
+    max-width: 1100px;
+    margin: 35px auto;
+    scroll-margin-top: 100px;
+}
+
+.content-section h2 {
+    color: #b8c4ff;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.content-section > p {
+    color: #c1c7d5;
+    font-size: 15px;
+}
+
+/* 5. HOME SECTION */
+.hero-section {
+    width: 90%;
+    max-width: 1100px;
+    min-height: 78vh;
+    margin: 35px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    scroll-margin-top: 100px;
+}
+
+.hero-section .welcome {
+    color: #a99aff;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.hero-section h1 {
+    color: #ffffff;
+    font-size: 43px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.hero-section h1 span {
+    color: #b8c4ff;
+}
+
+.hero-section h3 {
+    color: #b8c4ff;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+
+.hero-section > p:not(.welcome) {
+    max-width: 700px;
+    color: #c1c7d5;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+/* 6. BUTTONS */
+.custom-btn {
+    display: inline-block;
+    padding: 12px 26px;
+    border: none;
+    border-radius: 9px;
+    background: linear-gradient(135deg, #6979ef, #9b72e9);
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.custom-btn:hover {
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(105, 121, 239, 0.3);
+}
+
+/* 7. ABOUT AND CAREER OBJECTIVE */
+#about,
+#career-objective {
+    text-align: center;
+}
+
+#about p,
+#career-objective p {
+    max-width: 850px;
+    margin: auto;
+    color: #c1c7d5;
+    font-size: 15px;
+}
+
+/* 8. EDUCATION */
+.education-item {
+    padding: 20px;
+    margin-bottom: 18px;
+    background: rgba(255, 255, 255, 0.035);
+    border-left: 3px solid #8b83ef;
+    border-radius: 8px;
+}
+
+.education-item h3 {
+    color: #b8c4ff;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.education-item p {
+    color: #c1c7d5;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* 9. TECHNICAL SKILLS */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 18px;
+}
+
+.skill-category {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(184, 196, 255, 0.15);
+    border-radius: 12px;
+}
+
+.skill-category h3 {
+    color: #b8c4ff;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.skill-category ul {
+    color: #d1d5e0;
+    font-size: 13px;
+}
+
+.skill-category li {
+    margin-bottom: 7px;
+}
+
+/* 10. TECHNICAL INTERESTS */
+.interest-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.interest-list span {
+    padding: 12px 20px;
+    color: #d1d5e0;
+    background: rgba(124, 140, 255, 0.09);
+    border: 1px solid rgba(124, 140, 255, 0.25);
+    border-radius: 10px;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.interest-list span:hover {
+    background: rgba(124, 140, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+/* 11. PROJECTS */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    padding: 23px;
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(184, 196, 255, 0.15);
+    border-radius: 13px;
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    border-color: #8d80ed;
+    transform: translateY(-4px);
+}
+
+.project-card h3 {
+    color: #b8c4ff;
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    color: #c1c7d5;
+    font-size: 13px;
+}
+
+.project-card .project-tech {
+    margin-top: 12px;
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 8px;
+    color: #a99aff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.project-card a:hover {
+    color: #ffffff;
+}
+
+/* 12. TRAINING */
+.training-item {
+    padding: 22px;
+    background: rgba(255, 255, 255, 0.045);
+    border-left: 3px solid #8b83ef;
+    border-radius: 10px;
+}
+
+.training-item h3 {
+    color: #b8c4ff;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.training-item p {
+    color: #c1c7d5;
+    font-size: 14px;
+}
+
+/* 13. CERTIFICATES */
+.certificate-item {
+    text-align: center;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(184, 196, 255, 0.18);
+    border-radius: 12px;
+}
+
+.certificate-item h3 {
+    color: #b8c4ff;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.certificate-item p {
+    color: #c1c7d5;
+    font-size: 14px;
+}
+
+/* ==========================================
+   14. CONTACT SECTION
+   ========================================== */
+
+#contact {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.045);
+}
+
+#contact .section-description {
+    color: #c1c7d5;
+    font-size: 14px;
+    margin: 0 auto 28px;
+    max-width: 700px;
+}
+
+/* Contact Form Layout */
+.contact-form {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-form .form-group {
+    width: 100%;
+    margin: 0;
+    background: transparent !important;
+}
+
+/* Contact Input Fields */
+#contact .contact-form input,
+#contact .contact-form textarea {
+    display: block;
+    width: 100%;
+    min-height: 48px;
+    padding: 14px 16px;
+
+    background: #11152a !important;
+    background-color: #11152a !important;
+    background-image: none !important;
+
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+
+    border: 1px solid rgba(184, 196, 255, 0.35) !important;
+    border-radius: 10px !important;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+
+    outline: none;
+    box-shadow: none !important;
+    transition: 0.3s ease;
+}
+
+/* Placeholder Text */
+#contact .contact-form input::placeholder,
+#contact .contact-form textarea::placeholder {
+    color: #b5bbca !important;
+    -webkit-text-fill-color: #b5bbca !important;
+    opacity: 1 !important;
+}
+
+/* Input Focus */
+#contact .contact-form input:focus,
+#contact .contact-form textarea:focus {
+    background: #11152a !important;
+    background-color: #11152a !important;
+    color: #ffffff !important;
+    border-color: #9b7bff !important;
+    box-shadow: 0 0 12px rgba(155, 123, 255, 0.2) !important;
+}
+
+/* Text Area */
+#contact .contact-form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+/* Browser Autofill Fix */
+#contact .contact-form input:-webkit-autofill,
+#contact .contact-form input:-webkit-autofill:hover,
+#contact .contact-form input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 1000px #11152a inset !important;
+    -webkit-text-fill-color: #ffffff !important;
+    caret-color: #ffffff;
+}
+
+/* Send Message Button */
+.contact-form .custom-btn {
+    align-self: center;
+    min-width: 155px;
+    margin-top: 5px;
+}
+
+/* Contact Links */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin-top: 30px;
+}
+
+.contact-links a {
+    display: inline-block;
+    padding: 10px 17px;
+    color: #d1d5e0;
+    background: rgba(124, 140, 255, 0.08);
+    border: 1px solid rgba(124, 140, 255, 0.22);
+    border-radius: 9px;
+    font-size: 13px;
+    transition: 0.3s ease;
+}
+
+.contact-links a:hover {
+    color: #ffffff;
+    background: rgba(124, 140, 255, 0.18);
+    border-color: #9b7bff;
+    transform: translateY(-3px);
+}
+
+.contact-links i {
+    margin-right: 6px;
+}
+
+/* 15. FOOTER */
+footer {
+    text-align: center;
+    padding: 22px 15px;
+    background: rgba(255, 255, 255, 0.035);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: #a7adba;
+    font-size: 13px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* ==========================================
+   16. RESPONSIVE DESIGN
+   ========================================== */
+
+@media screen and (max-width: 1000px) {
+
+    .navbar-inner {
+        flex-wrap: wrap;
+    }
+
+    .site-navbar nav {
+        gap: 12px;
+    }
+
+    .site-navbar nav a {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .site-navbar {
+        padding: 14px 5%;
+    }
+
+    .navbar-inner {
+        justify-content: space-between;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .site-navbar nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 15px 0 5px;
+    }
+
+    .site-navbar nav.active {
+        display: flex;
+    }
+
+    .site-navbar nav a {
+        font-size: 14px;
+    }
+
+    .hero-section {
+        min-height: 65vh;
+    }
+
+    .hero-section h1 {
+        font-size: 33px;
+    }
+
+    .hero-section h3 {
+        font-size: 19px;
+    }
+
+    .content-section h2 {
+        font-size: 25px;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .glass-card {
+        padding: 25px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .hero-section,
+    .content-section {
+        width: 92%;
+    }
+
+    .hero-section {
+        min-height: 60vh;
+        padding: 25px 18px;
+    }
+
+    .hero-section h1 {
+        font-size: 27px;
+    }
+
+    .hero-section h3 {
+        font-size: 16px;
+    }
+
+    .hero-section > p:not(.welcome) {
+        font-size: 13px;
+    }
+
+    .hero-section .welcome {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .content-section {
+        margin: 25px auto;
+        padding: 23px 17px;
+    }
+
+    .content-section h2 {
+        font-size: 23px;
+    }
+
+    .content-section p {
+        font-size: 13px;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .interest-list {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .interest-list span {
+        text-align: center;
+    }
+
+    .education-item h3,
+    .project-card h3 {
+        font-size: 15px;
+    }
+
+    #contact .contact-form input,
+    #contact .contact-form textarea {
+        font-size: 13px;
+        padding: 12px;
+    }
+
+    .contact-links {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .contact-links a {
+        text-align: center;
+    }
+}
